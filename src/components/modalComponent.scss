@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.Modal {
+    position: fixed;
+    top: 13vh;
+    display: flex;
+    justify-content: center;
+    right: 10em;
+    background-color: $bg-color;
+    border-radius: 1em;
+
+    .positionModal {
+        max-height: 80vh;
+        overflow-wrap: break-word;
+        overflow-y: auto;
+        padding-bottom: 15px;
+        max-width: 80vh;
+    }
+
+    .Title {
+        padding: 10px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+
+    .Description {
+        padding: 10px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .Title {
+        padding: 10px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .ListModal {
+        padding: 0px 5px;
+
+    }
+
+    .Link {
+        color: $link;
+    }
+
+}

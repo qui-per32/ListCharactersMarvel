@@ -1,0 +1,23 @@
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+
+    .ListItem {
+        background-color: rgb(80, 73, 72);
+        padding: 10px;
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 1em;
+        margin: 1em;
+    }
+
+    .TitleItem {
+        padding-bottom: 5px;
+        text-align: center;
+    }
+}
