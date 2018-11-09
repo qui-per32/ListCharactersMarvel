@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import List from './List.jsx';
-import api from '../services/api';
+import List from '../List/List.jsx';
+import api from '../../services/api';
 import './mainSection.scss';
-import ModalComponent from './ModalComponent.jsx'
-
-
+import ModalComponent from '../ModalComponent/ModalComponent.jsx';
 
 class MainSection extends Component {
   constructor(props) {
@@ -16,39 +14,32 @@ class MainSection extends Component {
     };
   }
   select(personaje){
-     this.setState({selected: personaje})
+     this.setState({selected: personaje});
   }
 
   unselect() {
-    this.setState({ selected: null })
+    this.setState({ selected: null });
   }
-
-
 
   componentDidMount() {
       api.getData()
-      .then((res)=>{
-        console.log(res);
-        
+      .then((res)=>{      
          this.setState({
-           personajes: res.data.data.results})  
+           personajes: res.data.data.results});  
       }
       )
-      .catch(error => console.error(error))
+      .catch(error => console.error(error));
   }
 
-
   render() {
-    const {personajes, selected} = this.state
+    const {personajes, selected} = this.state;
     return (
       <section className="main">
         <ModalComponent selected={selected} close={this.unselect.bind(this)}/>
         <List personajes={personajes} select={this.select.bind(this)}/>
       </section>
-    
     );
   }
-
 } 
 
 export default MainSection;

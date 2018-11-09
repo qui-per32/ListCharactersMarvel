@@ -4,11 +4,10 @@ import './modalComponent.scss';
 class ModalComponent extends React.Component {
 
     render() {
-        let { selected, close } = this.props
+        let { selected, close } = this.props;
         return (
             <div className="Modal">
                 {
-
                     this.props.selected ?
                         <div onClick={close} className="positionModal">
 
